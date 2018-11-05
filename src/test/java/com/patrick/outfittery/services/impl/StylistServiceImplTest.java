@@ -53,6 +53,6 @@ public class StylistServiceImplTest {
 	@Test(expected = ResourceNotFoundException.class)
 	public void findByIdThrowsResourceNotFoundException() {
 		when(stylistRepository.findById(anyLong())).thenReturn(Optional.empty());
-		stylistRepository.findById(anyLong());
+		stylistService.findById(anyLong());
 	}
 }

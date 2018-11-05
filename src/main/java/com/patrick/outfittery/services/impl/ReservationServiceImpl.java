@@ -1,16 +1,16 @@
 package com.patrick.outfittery.services.impl;
 
-import com.patrick.outfittery.exceptions.UnavailableSlotException;
-import com.patrick.outfittery.repositories.ReservationRepository;
-import com.patrick.outfittery.repositories.TimeSlotRepository;
-import com.patrick.outfittery.services.ReservationService;
 import com.patrick.outfittery.Reservation;
 import com.patrick.outfittery.dto.ReservationDTO;
 import com.patrick.outfittery.entities.CustomerEntity;
 import com.patrick.outfittery.entities.ReservationEntity;
 import com.patrick.outfittery.entities.TimeSlotEntity;
 import com.patrick.outfittery.exceptions.ResourceNotFoundException;
+import com.patrick.outfittery.exceptions.UnavailableSlotException;
 import com.patrick.outfittery.repositories.CustomerRepository;
+import com.patrick.outfittery.repositories.ReservationRepository;
+import com.patrick.outfittery.repositories.TimeSlotRepository;
+import com.patrick.outfittery.services.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

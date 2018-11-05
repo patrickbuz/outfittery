@@ -3,7 +3,9 @@ package com.patrick.outfittery.services;
 import com.patrick.outfittery.dto.TimeSlotDTO;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Patrick B.
@@ -15,5 +17,5 @@ public interface TimeSlotService {
 
 	List<TimeSlotDTO> initNextDay();
 
-	List<TimeSlotDTO> findAll();
+	Set<Date> findAllAvailable();
 }

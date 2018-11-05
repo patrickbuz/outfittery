@@ -1,8 +1,8 @@
 package com.patrick.outfittery.controllers;
 
-import com.patrick.outfittery.services.ReservationService;
 import com.patrick.outfittery.Reservation;
 import com.patrick.outfittery.dto.ReservationDTO;
+import com.patrick.outfittery.services.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

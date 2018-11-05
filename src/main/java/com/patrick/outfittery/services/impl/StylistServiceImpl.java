@@ -3,7 +3,6 @@ package com.patrick.outfittery.services.impl;
 import com.patrick.outfittery.dto.StylistDTO;
 import com.patrick.outfittery.entities.StylistEntity;
 import com.patrick.outfittery.exceptions.ResourceNotFoundException;
-import com.patrick.outfittery.repositories.CustomerRepository;
 import com.patrick.outfittery.repositories.StylistRepository;
 import com.patrick.outfittery.services.StylistService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,12 +21,10 @@ import java.util.stream.Collectors;
 public class StylistServiceImpl implements StylistService {
 
 	private final StylistRepository stylistRepository;
-	private final CustomerRepository customerRepository;
 
 	@Autowired
-	public StylistServiceImpl(StylistRepository stylistRepository, CustomerRepository customerRepository) {
+	public StylistServiceImpl(StylistRepository stylistRepository) {
 		this.stylistRepository = stylistRepository;
-		this.customerRepository = customerRepository;
 	}
 
 	@Override

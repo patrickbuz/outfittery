@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -57,9 +58,9 @@ public class TimeSlotServiceImpl implements TimeSlotService {
 
 	@Override
 	@Transactional(readOnly = true)
-	public List<TimeSlotDTO> findAll() {
-		return timeSlotRepository.findAll().stream()
-				.map(TimeSlotDTO::new).collect(Collectors.toList());
+	public Set<Date> findAllAvailable() {
+		return timeSlotRepository.findAllByBusy(false).stream()
+				.map(TimeSlotEntity::getTime).collect(Collectors.toSet());
 	}
 
 	private Calendar getNextDayStart() {

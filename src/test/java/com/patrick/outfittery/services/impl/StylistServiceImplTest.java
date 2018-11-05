@@ -43,7 +43,7 @@ public class StylistServiceImplTest {
 		StylistEntity stylist = new StylistEntity();
 		stylist.setName("John Smith");
 		stylist.setStatus(StylistStatusEnum.OFFBOARDED);
-		Optional<StylistEntity> stylistEntity = Optional.of(new StylistEntity());
+		Optional<StylistEntity> stylistEntity = Optional.of(stylist);
 		when(stylistRepository.findById(anyLong())).thenReturn(stylistEntity);
 		StylistDTO stylistDTO = stylistService.findById(anyLong());
 		Assert.assertTrue("John Smith".equals(stylistDTO.getName()));
